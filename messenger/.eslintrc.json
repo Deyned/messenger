@@ -2,20 +2,35 @@
     "env": {
         "es2021": true
     },
+    "plugins": ["@typescript-eslint", "unused-imports"],
     "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended" 
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "@typescript-eslint"
-    ],
+    "ignorePatterns": [
+		"**/index.html"
+	],
     "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/member-ordering": "error",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/prefer-interface": "off",
+        "unused-imports/no-unused-imports": "error",
+        "prettier/prettier": [
+            "error",
+            {
+                "useTabs": true
+            }
+        ]
     },
+    
     "overrides": [
         {
             "files": ["*.component.html"],

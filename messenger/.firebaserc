@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "messenger-60e19": {
+      "hosting": {
+        "messenger": [
+          "messenger-60e19"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "messenger-60e19"
+  }
+}
